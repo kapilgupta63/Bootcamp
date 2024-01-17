@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox Value Copy</title>
+</head>
+<body>
+
+    <input type="text" id="input1" value="Initial Value">
+    <input type="checkbox" id="checkbox"> Copy Value
+    <input type="text" id="input2">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var input1 = document.getElementById('input1');
+            var checkbox = document.getElementById('checkbox');
+            var input2 = document.getElementById('input2');
+
+            checkbox.addEventListener('change', function () {
+                input2.value = checkbox.checked ? input1.value : '';
+            });
+        });
+    </script>
+
+</body>
+</html>
